@@ -12,7 +12,9 @@ public class MainMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _creditsScript = CreditsPanel.GetComponent<Credits>();  
+        _creditsScript = CreditsPanel.GetComponent<Credits>();
+        CreditsPanel.SetActive(false);
+        MenuPanel.SetActive(true);
     }
 
     // Update is called once per frame
@@ -30,5 +32,17 @@ public class MainMenuManager : MonoBehaviour
     void enableMovingCredits()
     {
         _creditsScript.setMoveBool(true);
+    }
+
+    public void DisableCredit()
+    {
+        disableMovingCredits();
+        CreditsPanel.SetActive(false);
+       
+    }
+
+    void disableMovingCredits()
+    {
+        _creditsScript.setMoveBool(false);
     }
 }

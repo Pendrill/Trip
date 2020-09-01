@@ -9,15 +9,18 @@ public class Credits : MonoBehaviour
     ScrollRect scrollRect;
 
     public float distance = 500f;
-    public float currentY = -552f;
+    public float startingY = -3f;
+  
     public float speedIncrease = 0.001f;
 
     private bool _moveUp = false;
+    private float _currentY;
 
     // Start is called before the first frame update
     void Start()
     {
         scrollRect = scrollRectObject.GetComponent<ScrollRect>();
+        _currentY = startingY;
     }
 
     // Update is called once per frame
@@ -25,16 +28,24 @@ public class Credits : MonoBehaviour
     {
         if(_moveUp)
         {
-            if (currentY <= distance)
+            if (_currentY <= distance)
             {
-                currentY += speedIncrease;
+                _currentY += speedIncrease;
             }
             else
             {
                 _moveUp = false;
             }
 
-            var pos = new Vector2(0f, currentY * 100f);
+            setRectPosition(_currentY);
+        }
+    }
+
+    void setRectPosition(float yPos)
+    {
+        if(scrollRect != null)
+        {
+            var pos = new Vector2(0f, yPos * 100f);
             scrollRect.content.localPosition = pos;
         }
     }
@@ -42,5 +53,15 @@ public class Credits : MonoBehaviour
     public void setMoveBool(bool activate)
     {
         _moveUp = activate;
+        checkRectPosition();
+    }
+
+    void checkRectPosition()
+    {
+        if (_currentY != startingY)
+        {
+            _currentY = startingY;
+            setRectPosition(startingY);
+        }
     }
 }
