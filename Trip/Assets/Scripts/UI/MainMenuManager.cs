@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class MainMenuManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void startGameSelected(int sceneNumber)
+    {
+        SceneManager.LoadScene(sceneNumber);
     }
 
     public void ActivateCredits()
@@ -45,4 +51,6 @@ public class MainMenuManager : MonoBehaviour
     {
         _creditsScript.setMoveBool(false);
     }
+
+    //https://www.youtube.com/watch?v=zit45k6CUMk
 }

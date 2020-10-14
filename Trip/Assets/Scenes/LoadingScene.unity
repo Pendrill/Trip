@@ -628,10 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caadf6788a18e5a49b2cb7c7eb4adc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowerImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  spawner: {fileID: 0}
+  _progressBar: {fileID: 441201976}
 --- !u!1 &1510051801
 GameObject:
   m_ObjectHideFlags: 0
