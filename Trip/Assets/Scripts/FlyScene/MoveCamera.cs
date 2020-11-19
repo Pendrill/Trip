@@ -40,4 +40,9 @@ public class MoveCamera : MonoBehaviour
     {
         return 1f + ((k -= 1f) * k * k);
     }
+
+    public float currentTime
+    {
+        get { return CubicOut(_currentTime); }
+    }
 }
