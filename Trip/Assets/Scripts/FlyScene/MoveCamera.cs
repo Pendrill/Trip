@@ -11,6 +11,8 @@ public class MoveCamera : MonoBehaviour
     private float _currentTime;
     private float _addX;
 
+    public bool enableMove = false;
+
     public float speed;
 
     // Start is called before the first frame update
@@ -24,7 +26,11 @@ public class MoveCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        updateXPos();
+        if(enableMove)
+        {
+            updateXPos();
+        }
+       
     }
 
     public void updateXPos()
@@ -39,6 +45,11 @@ public class MoveCamera : MonoBehaviour
     public static float CubicOut(float k)
     {
         return 1f + ((k -= 1f) * k * k);
+    }
+
+    public void enableCameraMove()
+    {
+
     }
 
     public float currentTime
