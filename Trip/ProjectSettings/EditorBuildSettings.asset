@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FirstScene_Fly.unity
     guid: 7c6b3268b52681140825bfdefb94aede
+  - enabled: 1
+    path: Assets/Scenes/passportScene.unity
+    guid: d2848b6e49288e049ac0f178c3ede015
   m_configObjects: {}

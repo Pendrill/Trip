@@ -6,6 +6,7 @@ public class RaiseBackground : MonoBehaviour
 {
     public MoveCamera parallaxRef;
     public Transform background;
+    public TransitionScreenText transitionToHands;
     private float _time = 0;
 
     private float _yTweenVal = 0;
@@ -13,6 +14,10 @@ public class RaiseBackground : MonoBehaviour
     private float _yMax = -5;
 
     private bool _yReached = false;
+
+
+    private bool callTransitionOnce = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +42,12 @@ public class RaiseBackground : MonoBehaviour
         if (_time > 0.24)
         {
             increaseY();
+        }
+
+        if(_time > 0.3 && callTransitionOnce)
+        {
+            callTransitionOnce = false;
+            transitionToHands.setCurrentState(TransitionScreenText.TextState.FadeIn);
         }
     }
 

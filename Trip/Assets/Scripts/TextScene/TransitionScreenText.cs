@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class TransitionScreenText : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class TransitionScreenText : MonoBehaviour
 
     public float waitTime = 1.0f;
     public string testString = "this is a test string";
+
     string currentTextString = "";
     int index = 0;
     string colorRichText = "";
@@ -22,13 +24,16 @@ public class TransitionScreenText : MonoBehaviour
     public Image backgroundImage;
     public GameObject blinker;
 
+    public bool fadeOutAction = true;
+
     int indexAlpha = 0;
     string alphaText = "";
-
 
     float alphaTime = 0.0f;
     float startingAlpha = 0f;
     float endingAlpha = 1f;
+
+    public UnityEvent action;
 
     // Start is called before the first frame update
     void Start()
@@ -88,7 +93,16 @@ public class TransitionScreenText : MonoBehaviour
                 break;
 
             case TextState.FadeOut:
-                _decreaseImageAlpha();
+                action.Invoke();
+                if(fadeOutAction)
+                {
+                    _decreaseImageAlpha();
+                }
+                else
+                {
+                    setCurrentState(TextState.Wait);
+                }
+               
                 break;
         }
 

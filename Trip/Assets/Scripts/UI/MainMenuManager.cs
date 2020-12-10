@@ -26,6 +26,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void startGameSelected(int sceneNumber)
     {
+        LoadingSingleton.Loading_Instance.setNextSceneToLoad(2);
         SceneManager.LoadScene(sceneNumber);
     }
 

@@ -7,6 +7,8 @@ public class HandManager : MonoBehaviour
     public GameObject initialHands;
     public GameObject heldHands;
 
+    public TransitionScreenText finalTransition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +35,8 @@ public class HandManager : MonoBehaviour
     public void enableHeldHands()
     {
         heldHands.SetActive(true);
+        LoadingSingleton.Loading_Instance.setNextSceneToLoad(3);
+        finalTransition.setCurrentState(TransitionScreenText.TextState.FadeIn);
     }
+
 }

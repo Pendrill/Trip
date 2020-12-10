@@ -49,7 +49,12 @@ public class MoveCamera : MonoBehaviour
 
     public void enableCameraMove()
     {
-
+        enableMove = true;
+    }
+    
+    public void disableCameraMove()
+    {
+        enableMove = false;
     }
 
     public float currentTime
