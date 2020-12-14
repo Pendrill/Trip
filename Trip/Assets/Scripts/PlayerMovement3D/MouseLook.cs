@@ -9,17 +9,32 @@ public class MouseLook : MonoBehaviour
     public Transform playerBody;
 
     float xRotation = 0f;
+
+    bool enableCameraMove = true;
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        enableCursorLock();
     }
 
     // Update is called once per frame
     void Update()
     {
-        MoveCamera();
-
+        if(enableCameraMove)
+        {
+            if(Cursor.lockState != CursorLockMode.Locked)
+            {
+                enableCursorLock();
+            }
+            MoveCamera();
+        }
+        else
+        {
+            if (Cursor.lockState != CursorLockMode.None)
+            {
+                disableCursorLock();
+            }
+        }
     }
 
     void MoveCamera()
@@ -32,5 +47,25 @@ public class MouseLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+    }
+
+    void enableCursorLock()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    
+    void disableCursorLock()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void enableMove()
+    {
+        enableCameraMove = true;
+    }
+
+    public void disableMove()
+    {
+        enableCameraMove = false;
     }
 }
