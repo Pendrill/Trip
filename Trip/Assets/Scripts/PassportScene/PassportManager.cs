@@ -9,6 +9,7 @@ public class PassportManager : MonoBehaviour
     public GameObject placedPassport;
     public MoveHand hand;
     public PlacedPassport passport;
+    public TransitionScreenText nextSceneTransition;
 
     bool initiateTimer = false;
     float timer = 0.0f;
@@ -56,13 +57,10 @@ public class PassportManager : MonoBehaviour
     {
         LoadingSingleton.Loading_Instance.setNextSceneToLoad(2);
         Debug.Log("TRANSITION TIME");
-        //nextSceneTransition.setCurrentState(TransitionScreenText.TextState.FadeIn);
+        nextSceneTransition.setCurrentState(TransitionScreenText.TextState.FadeIn);
     }
 
-    public void LoadNextScene(int sceneNumber)
-    {
-        //SceneManager.LoadScene(sceneNumber);
-    }
+    
 
 
 }

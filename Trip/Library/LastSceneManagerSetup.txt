@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/handsTest.unity
+- path: Assets/Scenes/GivePassport.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
