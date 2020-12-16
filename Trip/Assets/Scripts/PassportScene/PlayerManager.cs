@@ -70,6 +70,12 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public void enableMovement()
+    {
+        playerMove.enableMove();
+        cameraMove.enableMove();
+    }
+
     void disableMovement()
     {
         playerMove.disableMove();
@@ -89,7 +95,7 @@ public class PlayerManager : MonoBehaviour
 
     public void setUpNextScene()
     {
-        LoadingSingleton.Loading_Instance.setNextSceneToLoad(2);
+        LoadingSingleton.Loading_Instance.setNextSceneToLoad(4);
         nextSceneTransition.setCurrentState(TransitionScreenText.TextState.FadeIn);
     }
 

@@ -7,7 +7,7 @@ public class PlayerMovementPassport : MonoBehaviour
 
     public CharacterController controller;
     public float speed = 12f;
-    bool canMove = true;
+    bool canMove = false;
     // Update is called once per frame
     void Update()
     {
