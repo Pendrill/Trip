@@ -55,7 +55,7 @@ public class PassportManager : MonoBehaviour
 
     void transitionToNextScreen()
     {
-        LoadingSingleton.Loading_Instance.setNextSceneToLoad(2);
+        LoadingSingleton.Loading_Instance.setNextSceneToLoad(5);
         Debug.Log("TRANSITION TIME");
         nextSceneTransition.setCurrentState(TransitionScreenText.TextState.FadeIn);
     }

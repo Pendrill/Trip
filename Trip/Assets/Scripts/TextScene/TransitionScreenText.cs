@@ -59,9 +59,7 @@ public class TransitionScreenText : MonoBehaviour
 
             case TextState.Type:
                 if(alphaDisplay)
-                {
-                    
-                    Debug.Log(colorRichText);
+                {                    
                     displayTextAlpha();
                 }
                 else
@@ -151,7 +149,6 @@ public class TransitionScreenText : MonoBehaviour
                 alphaText = alphaText.Insert(indexAlpha, nextChar.ToString());
                 textObject.text = alphaText;
                 indexAlpha += 1;
-                Debug.Log(indexAlpha);
                 setCurrentState(TextState.ResetTimer);
             }
                
@@ -266,5 +263,11 @@ public class TransitionScreenText : MonoBehaviour
     void disableBlinker()
     {
         blinker.SetActive(false);
+    }
+
+    public void updateString(string newString)
+    {
+        testString = newString;
+        alphaText = colorRichText + testString + "</color>";
     }
 }

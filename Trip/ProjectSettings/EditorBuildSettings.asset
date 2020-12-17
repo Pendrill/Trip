@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GivePassport.unity
     guid: 7373aae6b5b32014792acdd77da8be8e
+  - enabled: 1
+    path: Assets/Scenes/Cafe.unity
+    guid: a0c5a60dea3fd5b40a0b29c46caf8d38
+  - enabled: 1
+    path: Assets/Scenes/Exploring.unity
+    guid: 0fef939698305b7438f0f1a3e68ee806
   m_configObjects: {}

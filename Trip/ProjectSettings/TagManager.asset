@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - ExitDoor
+  - drink1
+  - drink2
+  - drink3
+  - drink4
+  - drink5
+  - drink6
   layers:
   - Default
   - TransparentFX

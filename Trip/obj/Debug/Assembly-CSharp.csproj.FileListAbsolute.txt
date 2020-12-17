@@ -1,0 +1,2 @@
+D:\Trip\Trip\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Trip\Trip\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
