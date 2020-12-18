@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Exploring.unity
     guid: 0fef939698305b7438f0f1a3e68ee806
+  - enabled: 1
+    path: Assets/Scenes/Eiffel.unity
+    guid: 844b05b02dde32b4faf2eaeb080453da
   m_configObjects: {}
