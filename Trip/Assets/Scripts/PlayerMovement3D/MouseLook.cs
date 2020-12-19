@@ -52,11 +52,13 @@ public class MouseLook : MonoBehaviour
     void enableCursorLock()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     
     void disableCursorLock()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void enableMove()

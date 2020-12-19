@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class moveCamera : MonoBehaviour
 {
+    public AudioSource audio;
+    bool startAudio = true;
     public float speed = 1f;
     bool enableAction = false;
     float delayTimer = 0f;
@@ -26,6 +28,12 @@ public class moveCamera : MonoBehaviour
     {
         if (!enableAction) return;
 
+        if(startAudio)
+        {
+            audio.Play();
+            startAudio = false;
+        }
+
         if(waitingForTimer)
         {
             increaseDelayTimer();
@@ -42,12 +50,14 @@ public class moveCamera : MonoBehaviour
         if (delayTimer >= reachedDelayTimer)
         {
             waitingForTimer = false;
+          
         }
     }
 
     public void canStart()
     {
         enableAction = true;
+        
     }
 
     void moveCameraUp()

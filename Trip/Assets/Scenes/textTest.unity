@@ -157,6 +157,7 @@ MonoBehaviour:
   textObject: {fileID: 517459354}
   backgroundImage: {fileID: 1854381702}
   blinker: {fileID: 1596782950}
+  fadeOutAction: 1
   action:
     m_PersistentCalls:
       m_Calls: []
@@ -669,3 +670,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a2a38f3bdc40ee47a4401745a44a087, type: 3}
+--- !u!1001 &8938223689998365956
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.890686
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -863.9574
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -75.38721
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678555035191325511, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969303329553151080, guid: bc6242508d6067f42a38283d97177b00,
+        type: 3}
+      propertyPath: m_Name
+      value: QuitGame
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc6242508d6067f42a38283d97177b00, type: 3}

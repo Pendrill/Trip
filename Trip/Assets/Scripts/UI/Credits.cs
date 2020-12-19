@@ -39,6 +39,11 @@ public class Credits : MonoBehaviour
 
             setRectPosition(_currentY);
         }
+
+        if(_currentY >= 4.9f)
+        {
+            _moveUp = false;
+        }
     }
 
     void setRectPosition(float yPos)
